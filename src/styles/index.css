@@ -4,8 +4,10 @@
 
 html,
 body {
-  min-width: 360px; /* Prevents the page from shrinking below 360px */
-  overflow-x: hidden; /* Prevents horizontal scrolling */
+  min-width: 360px;
+  /* Prevents the page from shrinking below 360px */
+  overflow-x: hidden;
+  /* Prevents horizontal scrolling */
 }
 
 /* Scrollbar Styles */
