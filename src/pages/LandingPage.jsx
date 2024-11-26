@@ -7,7 +7,7 @@ import Navbar from "../components/Navbar";
 
 const Landing = () => {
   return (
-    <div>
+    <div className="bg-gray-900 text-white">
       <Navbar />
       <HeroSection />
       <CoreSkills />

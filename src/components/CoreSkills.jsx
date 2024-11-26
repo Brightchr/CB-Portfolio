@@ -2,46 +2,64 @@ import React from "react";
 
 const CoreSkills = () => {
   return (
-    <section className="py-20 bg-gray-900">
+    <section className="py-20 bg-black">
       <div className="max-w-6xl mx-auto px-6 text-center">
-        {" "}
-        {/* Added horizontal padding */}
         <h2 className="text-3xl md:text-4xl font-bold mb-12 text-white">
           My Core Skills
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 px-4">
-          {" "}
-          {/* Added gap and padding */}
-          <div className="bg-gray-800 p-6 rounded-lg shadow-lg transform transition-all hover:scale-105 hover:shadow-2xl hover:bg-gray-700">
-            <h3 className="text-xl font-semibold mb-4 text-blue-400">
-              Web Development
-            </h3>
-            <p className="text-gray-400">
-              Building responsive and modern websites using React, TailwindCSS,
-              and more.
-            </p>
-          </div>
-          <div className="bg-gray-800 p-6 rounded-lg shadow-lg transform transition-all hover:scale-105 hover:shadow-2xl hover:bg-gray-700">
-            <h3 className="text-xl font-semibold mb-4 text-blue-400">
-              Software Engineering
-            </h3>
-            <p className="text-gray-400">
-              Crafting efficient, scalable, and maintainable software solutions.
-            </p>
-          </div>
-          <div className="bg-gray-800 p-6 rounded-lg shadow-lg transform transition-all hover:scale-105 hover:shadow-2xl hover:bg-gray-700">
-            <h3 className="text-xl font-semibold mb-4 text-blue-400">
-              UI/UX Design
-            </h3>
-            <p className="text-gray-400">
-              Designing intuitive and user-friendly interfaces with attention to
-              detail.
-            </p>
-          </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
+          <SkillCard
+            title="Web Development"
+            description="Explore more →"
+            background="WebDev.png"
+          />
+          <SkillCard
+            title="Software Engineering"
+            description="Explore more →"
+            background="SoftwareEngineering.png"
+          />
+          <SkillCard
+            title="UI/UX Design"
+            description="Explore more →"
+            background="UIDesign.png"
+          />
+          <SkillCard
+            title="Project Management"
+            description="Explore more →"
+            background="ProjectManagement.png"
+          />
         </div>
       </div>
     </section>
   );
 };
+
+const SkillCard = ({ title, description, background }) => (
+  <div
+    className="relative rounded-lg overflow-hidden shadow-lg transform transition-transform hover:scale-105"
+    style={{
+      width: "100%", // Makes the card responsive
+      maxWidth: "260px",
+      aspectRatio: "260 / 430", // Maintains the aspect ratio
+      margin: "auto",
+      backgroundImage: `url(${background})`,
+      backgroundSize: "cover",
+      backgroundPosition: "center",
+    }}
+  >
+    <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/50 to-black"></div>
+    {/* Align content to the left */}
+    <div className="absolute bottom-0 left-0 p-4 z-10 text-left">
+      <h3 className="text-lg font-bold text-white mb-1">{title}</h3>
+      <a
+        href="#"
+        className="text-blue-400 text-sm font-medium hover:underline flex items-center"
+      >
+        {description}
+        <span className="ml-1"></span>
+      </a>
+    </div>
+  </div>
+);
 
 export default CoreSkills;

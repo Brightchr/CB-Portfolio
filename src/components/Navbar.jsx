@@ -9,9 +9,8 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-white border-gray-200 dark:bg-gray-900 fixed w-full top-0 z-50">
+    <nav className="bg-white border-gray-200 dark:bg-black fixed w-full top-0 z-50 opacity-80">
       <div className="max-w-screen-xl flex items-center justify-between mx-auto p-4">
-        {/* Logo */}
         <a href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
           <img src="/C.png" className="h-8 rounded-full" alt="CB Logo" />
           <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
@@ -19,7 +18,6 @@ const Navbar = () => {
           </span>
         </a>
 
-        {/* Hamburger Icon */}
         <button
           onClick={toggleMenu}
           type="button"
@@ -45,31 +43,45 @@ const Navbar = () => {
           </svg>
         </button>
 
-        {/* Desktop Menu */}
         <div className="hidden md:block md:w-auto">
           <ul className="font-medium flex space-x-8">
             <li>
-              <NavLink to="/landing" className="text-gray-900 dark:text-white">
+              <NavLink
+                to="/landing"
+                className="text-gray-900 dark:text-white hover:text-blue-400 transition-colors duration-300"
+              >
                 Home
               </NavLink>
             </li>
             <li>
-              <a href="#" className="text-gray-900 dark:text-white">
+              <a
+                href="#"
+                className="text-gray-900 dark:text-white hover:text-blue-400 transition-colors duration-300"
+              >
                 About
               </a>
             </li>
             <li>
-              <a href="#" className="text-gray-900 dark:text-white">
+              <a
+                href="#"
+                className="text-gray-900 dark:text-white hover:text-blue-400 transition-colors duration-300"
+              >
                 Services
               </a>
             </li>
             <li>
-              <a href="#" className="text-gray-900 dark:text-white">
+              <a
+                href="#"
+                className="text-gray-900 dark:text-white hover:text-blue-400 transition-colors duration-300"
+              >
                 Portfolio
               </a>
             </li>
             <li>
-              <NavLink to="/contact" className="text-gray-900 dark:text-white">
+              <NavLink
+                to="/contact"
+                className="text-gray-900 dark:text-white hover:text-blue-400 transition-colors duration-300"
+              >
                 Contact
               </NavLink>
             </li>
@@ -77,7 +89,6 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Full-Screen Mobile Menu */}
       {isMenuOpen && (
         <div className="fixed inset-0 bg-gray-900 bg-opacity-90 flex flex-col items-center justify-center z-40">
           <button
@@ -101,27 +112,35 @@ const Navbar = () => {
           </button>
           <ul className="text-white text-2xl space-y-6">
             <li>
-              <NavLink to="/landing" onClick={toggleMenu}>
+              <NavLink
+                to="/landing"
+                className="hover:text-blue-400"
+                onClick={toggleMenu}
+              >
                 Home
               </NavLink>
             </li>
             <li>
-              <a href="#" onClick={toggleMenu}>
+              <a href="#" className="hover:text-blue-400" onClick={toggleMenu}>
                 About
               </a>
             </li>
             <li>
-              <a href="#" onClick={toggleMenu}>
+              <a href="#" className="hover:text-blue-400" onClick={toggleMenu}>
                 Services
               </a>
             </li>
             <li>
-              <a href="#" onClick={toggleMenu}>
+              <a href="#" className="hover:text-blue-400" onClick={toggleMenu}>
                 Portfolio
               </a>
             </li>
             <li>
-              <NavLink to="/contact" onClick={toggleMenu}>
+              <NavLink
+                to="/contact"
+                className="hover:text-blue-400"
+                onClick={toggleMenu}
+              >
                 Contact
               </NavLink>
             </li>
