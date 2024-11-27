@@ -2,7 +2,13 @@ import React from "react";
 
 const ContactHero = () => {
   return (
-    <div className="relative flex items-center justify-center h-[40vh] text-center bg-gradient-to-br from-gray-800 to-black text-white">
+    <div
+      className="relative min-h-screen bg-cover bg-center flex items-center justify-center"
+      style={{
+        backgroundImage: "url('./ContactHero.png')",
+      }}
+    >
+      <div className="absolute inset-0 bg-gradient-to-b from-black/60 to-black/90"></div>
       <div className="relative z-10">
         <h1 className="text-4xl md:text-5xl font-bold">Get in Touch</h1>
         <p className="mt-4 text-gray-400 text-lg">

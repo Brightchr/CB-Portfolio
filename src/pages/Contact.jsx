@@ -8,7 +8,7 @@ import Navbar from "../components/Navbar";
 
 const Contact = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white">
+    <div className="min-h-screen bg-gray-900 text-white">
       <Navbar />
       <ContactHero />
       <main className="max-w-6xl mx-auto space-y-12 px-4">

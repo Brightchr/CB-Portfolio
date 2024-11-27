@@ -29,7 +29,7 @@ const FAQs = () => {
     {
       question: "How can I contact you for collaborations?",
       answer:
-        "You can use the contact form above or reach me directly at my email: brightch@bu.edu.",
+        "You can use the contact form below or reach me directly at my email: brightch@bu.edu.",
     },
   ];
 
